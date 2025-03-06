@@ -1,0 +1,14 @@
+name: 'My Docker Action'
+description: 'A Docker-based GitHub Action'
+inputs:
+  my_input:
+    description: 'A sample input'
+    required: true
+    default: 'default_value'
+outputs:
+  my_output:
+    description: 'The output of the action'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
