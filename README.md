@@ -1,5 +1,8 @@
 # my-custom-action
 
+## Tag
+v1.0.6
+## Misc
 Creating a custom GitHub Action involves writing a set of instructions that automate a task you want to perform during your CI/CD workflows. You can create a GitHub Action using Docker, JavaScript, or directly using shell commands. Here's how you can build and publish a custom GitHub Action:
 1. Set Up Your Repository
 
