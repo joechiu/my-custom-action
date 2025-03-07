@@ -10,6 +10,6 @@ try {
   core.setOutput("my_output", `Hello, ${myInput}!`);
 
 } catch (error) {
-  core.setFailed(error.message);
+  core.setFailed("Hello - " + error.message);
 }
 
