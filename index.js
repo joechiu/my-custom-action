@@ -1,3 +1,5 @@
+import * as core from "@actions/core"
+
 const core = require('@actions/core');
 
 try {
