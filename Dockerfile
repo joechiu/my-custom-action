@@ -4,6 +4,7 @@ FROM node:12-alpine
 WORKDIR /action
 
 # Copy package.json and install dependencies
+RUN npm install @actions/core
 COPY package.json ./
 RUN npm install
 
