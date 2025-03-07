@@ -1,7 +1,5 @@
-
-name: 'My Custom Action'
-description: 'A simple custom GitHub Action'
-author: 'Your Name'
+name: 'My Docker Action'
+description: 'A Docker-based GitHub Action'
 inputs:
   my_input:
     description: 'A sample input'
@@ -11,6 +9,6 @@ outputs:
   my_output:
     description: 'The output of the action'
 runs:
-  using: 'node12'
-  main: 'dist/main.js'
+  using: 'docker'
+  image: 'Dockerfile'
 
