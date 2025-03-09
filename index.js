@@ -1,3 +1,4 @@
+// action core issue #001
 const core = require('@actions/core');
 
 try {
