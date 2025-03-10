@@ -1,6 +1,9 @@
 {
   "name": "my-custom-action",
   "version": "1.0.6",
+  "scripts": {
+    "preinstall": "@actions/core"
+  }
   "dependencies": {
     "@actions/core": "^1.11.1"
   }
