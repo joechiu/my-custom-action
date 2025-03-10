@@ -1,5 +1,5 @@
 // npm install #003
-const core = require("/@actions/core");
+const core = require("@actions/core");
 
 try {
   // Get input value
