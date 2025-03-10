@@ -5,11 +5,12 @@ WORKDIR /action
 
 # Copy package.json and install dependencies
 COPY package.json ./
-RUN npm install @actions/core -g
 RUN npm install
 
 # Copy the rest of the action's code
 COPY . .
+RUN npm install @actions/core -g
+RUN npm install @actions/core 
 
 # Command to run the action
 ENTRYPOINT ["node", "index.js"]
