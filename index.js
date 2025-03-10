@@ -1,5 +1,4 @@
-var foo = process.env.NODE_PATH;
-const core = require(foo+"/@actions/core");
+const core = require("@actions/core");
 
 try {
   // Get input value
