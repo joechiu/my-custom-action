@@ -1,3 +1,4 @@
+// npm install #002
 const core = require("@actions/core");
 
 try {
