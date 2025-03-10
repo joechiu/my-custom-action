@@ -1,6 +1,5 @@
-// npm install #002
-var path = "/opt/acttoolcache/node/18.20.7/x64/lib/node_modules";
-const core = require(path + "/@actions/core");
+// npm install #003
+const core = require("/@actions/core");
 
 try {
   // Get input value
