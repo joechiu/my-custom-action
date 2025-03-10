@@ -11,6 +11,7 @@ RUN npm install
 COPY . .
 RUN npm install @actions/core -g
 RUN npm install @actions/core 
+RUN export NODE_PATH=$(npm root --quiet -g)
 
 # Command to run the action
 ENTRYPOINT ["node", "index.js"]
