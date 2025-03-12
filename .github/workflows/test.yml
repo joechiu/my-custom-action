@@ -1,3 +1,20 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run custom Node.js action
+        uses: ./ # Points to the local custom action
+        with:
+          message: "Hello from my Node.js Action!"
+
 # name: Test Custom Action
 # 
 # on:
@@ -19,21 +36,4 @@
 # 					message: "Hello from my Node.js Action!"
 # 
 # name: Test Custom Node.js Action
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  test-action:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Run custom Node.js action
-        uses: ./ # Points to the local custom action
-        with:
-          message: "Hello from my Node.js Action!"
 
