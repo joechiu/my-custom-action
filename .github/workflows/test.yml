@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run custom Node.js action
-        uses: joechiu/my-custom-action@v1.0.8 # Points to the local custom action
+        uses: joechiu/my-custom-action@v1.0.9 # Points to the local custom action
         with:
           message: "Hello from my Node.js Action!"
 
