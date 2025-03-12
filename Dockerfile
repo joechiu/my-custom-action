@@ -1,5 +1,10 @@
 FROM node:latest
 
+RUN apt remove nodejs && apt autoremove
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
+RUN apt update
+RUN apt install nodejs -y
+
 ENV NODE_PATH=$(npm root --quiet -g)
 
 # Set working directory
