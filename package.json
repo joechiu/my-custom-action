@@ -1,7 +1,6 @@
 {
-  "name": "my-custom-action",
-  "version": "1.0.6",
-  "dependencies": {
-    "@actions/core": "^1.11.1"
-  }
+  "name": "my-node-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {}
 }

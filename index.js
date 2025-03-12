@@ -1,14 +1,6 @@
-// npm install #003
-const core = require("@actions/core");
+console.log("Running custom Node.js GitHub Action...");
 
-try {
-  // Get input value
-  const myInput = core.getInput('my_input');
-  
-  // Set output value
-  core.setOutput("my_output", `Hello, ${myInput}!`);
+const args = process.argv.slice(2);
+const message = args[0] || "Hello, GitHub Actions!";
 
-} catch (error) {
-  core.setFailed("Hello - " + error.message);
-}
-
+console.log(`Message: ${message}`);

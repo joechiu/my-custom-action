@@ -1,20 +1,15 @@
-FROM node:latest
+# Use an official Node.js runtime as a base image
+FROM node:18-alpine
 
-RUN apt remove nodejs && apt autoremove
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
-RUN apt update
-RUN apt install nodejs -y
+# Set the working directory
+WORKDIR /app
 
-# Set working directory
-WORKDIR /action
+# Copy package files and install dependencies
+COPY package.json package-lock.json ./
+RUN npm install --only=production
 
-# Copy package.json and install dependencies
-COPY package.json ./
-RUN npm install
+# Copy the script
+COPY index.js .
 
-# Copy the rest of the action's code
-COPY . .
-
-# Command to run the action
+# Define the entry point
 ENTRYPOINT ["node", "index.js"]
-
