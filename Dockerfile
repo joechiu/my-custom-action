@@ -6,9 +6,9 @@ WORKDIR /app
 
 # Copy package files and install dependencies
 COPY package.json package-lock.json ./
-RUN npm install --only=production
+RUN npm install --omit=dev  # Ensure production dependencies are installed
 
-# Copy the script
+# Copy the script files
 COPY index.js .
 
 # Define the entry point
