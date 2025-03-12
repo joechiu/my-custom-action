@@ -1,4 +1,4 @@
-FROM node:20.18.2
+FROM node:latest
 
 ENV NODE_PATH=$(npm root --quiet -g)
 
