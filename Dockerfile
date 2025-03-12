@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:20.18.2
 
 ENV NODE_PATH=$(npm root --quiet -g)
 
