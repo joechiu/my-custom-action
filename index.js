@@ -1,6 +1,11 @@
-console.log("Running custom Node.js GitHub Action...");
+const core = require("@actions/core");
 
-const args = process.argv.slice(2);
-const message = args[0] || "Hello, GitHub Actions!";
-
-console.log(`Message: ${message}`);
+try {
+  // Get the input 'message' from the action
+  const message = core.getInput("message");
+  
+  // Log the message
+  core.info(`🚀 Message from action: ${message}`);
+} catch (error) {
+  core.setFailed(`Action failed: ${error.message}`);
+}
